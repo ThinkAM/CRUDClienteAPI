@@ -14,3 +14,11 @@ O pedido não pode ser entregue devido à sintaxe incorreta.
 
 # 412 Pré-condição falhou
 O servidor não cumpre uma das condições que o solicitante coloca na solicitação.
+
+# Conexão com o MySql
+
+```json
+    "ConnectionStrings": {
+      "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser@talkcode; Pwd=B@z1nga2018; SslMode=Preferred;"
+    }
+```
