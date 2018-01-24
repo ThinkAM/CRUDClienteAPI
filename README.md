@@ -22,3 +22,8 @@ O servidor não cumpre uma das condições que o solicitante coloca na solicita�
       "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser@talkcode; Pwd=B@z1nga2018; SslMode=Preferred;"
     }
 ```
+
+```sql
+CREATE SCHEMA `talkcode` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci ;
+```
+
