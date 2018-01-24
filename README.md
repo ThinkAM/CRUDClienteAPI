@@ -23,7 +23,17 @@ O servidor não cumpre uma das condições que o solicitante coloca na solicita�
     }
 ```
 
+# Criação do Schema no MySql
 ```sql
 CREATE SCHEMA `talkcode` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci ;
 ```
 
+# Criação da Tabela no banco talkcode
+```sql
+CREATE TABLE `talkcode`.`data` (
+  `key` VARCHAR(50) NOT NULL,
+  `collection` VARCHAR(45) NOT NULL,
+  `value` JSON NOT NULL,
+  PRIMARY KEY (`key`))
+ENGINE = InnoDB;
+```
