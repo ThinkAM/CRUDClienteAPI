@@ -17,9 +17,16 @@ O servidor não cumpre uma das condições que o solicitante coloca na solicita�
 
 # Conexão com o MySql
 
+# Quando for no Azure o usuário deve ser usuario@banco
 ```json
     "ConnectionStrings": {
       "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser@talkcode; Pwd=B@z1nga2018; SslMode=Preferred;"
+    }
+```
+# Quando for Local (que é o nosso caso) o usuário deve ser somente o usuario
+```json
+    "ConnectionStrings": {
+      "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser; Pwd=B@z1nga2018; SslMode=Preferred;"
     }
 ```
 
