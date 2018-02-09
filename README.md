@@ -1,4 +1,4 @@
-# CRUDClienteAPI
+## CRUDClienteAPI
 CRUD de Cliente usando Azure Functions e base MySQL local
 
 # Lista de códigos de estado HTTP usados neste exemplo
@@ -20,13 +20,13 @@ O servidor não cumpre uma das condições que o solicitante coloca na solicita�
 # Quando for no Azure o usuário deve ser usuario@banco
 ```json
     "ConnectionStrings": {
-      "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser@talkcode; Pwd=B@z1nga2018; SslMode=Preferred;"
+      "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser@talkcode; Pwd=Su@S3nh@; SslMode=Preferred;"
     }
 ```
 # Quando for Local (que é o nosso caso) o usuário deve ser somente o usuario
 ```json
     "ConnectionStrings": {
-      "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser; Pwd=B@z1nga2018; SslMode=Preferred;"
+      "sqldb_connection": "Server=localhost; Port=3306; Database=talkcode; Uid=dbuser; Pwd=Su@S3nh@; SslMode=Preferred;"
     }
 ```
 
@@ -43,4 +43,21 @@ CREATE TABLE `talkcode`.`data` (
   `value` JSON NOT NULL,
   PRIMARY KEY (`key`))
 ENGINE = InnoDB;
+```
+# Exemplo de local.settings.json
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "AzureWebJobsDashboard": ""
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*"
+  },
+  "ConnectionStrings": {
+    "sqldb_connection": "<sua conexao>"
+  }
+}
 ```
